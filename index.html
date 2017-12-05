@@ -1,75 +1,106 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html>
-<head>
+
 <style>
-.parallax {
-    /* The image used */
-    background-image: url("img/img_parallax.jpg");
 
-    /* Set a specific height */
-    min-height: 500px; 
+    .container {
+      width: 200px;
+      height: 260px;
+      float: left;
+      margin: 0 auto 40px;
+      border: 1px solid #CCC;
+      -webkit-perspective: 800px;
+         -moz-perspective: 800px;
+           -o-perspective: 800px;
+              perspective: 800px;
+    }
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    #card {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform-origin: right center;
+         -moz-transform-origin: right center;
+           -o-transform-origin: right center;
+              transform-origin: right center;
+    }
+
+    #card:hover {
+      -webkit-transform: translateX( -100% ) rotateY( -180deg );
+         -moz-transform: translateX( -100% ) rotateY( -180deg );
+           -o-transform: translateX( -100% ) rotateY( -180deg );
+              transform: translateX( -100% ) rotateY( -180deg );
+    }
+
+    #card figure {
+      display: block;
+      height: 100%;
+      width: 100%;
+      line-height: 260px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 140px;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+
+    #card .front {
+      background: red;
+    }
+
+    #card .back {
+      background: blue;
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+    }
+
 </style>
-</head>
+
 <body>
-
-<p></p>
-
-<div class="parallax"></div>
-
-<div style="height:1000px;background-color:red;font-size:36px">
-
-</div>
+  <section class="container">
+    <div id="card">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </section>
+  <section class="container">
+    <div id="card">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </section>
+  <section class="container">
+    <div id="card">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </section>
+  <section class="container">
+    <div id="card">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </section>
+  <section class="container">
+    <div id="card">
+      <figure class="front">1</figure>
+      <figure class="back">2</figure>
+    </div>
+  </section>
 
 </body>
 </html>
-=======
-	<html>
-	   
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	<style>
-	    div {
-	        background-color: #ff9999;
-	        height: 150px;
-	    }
-	    </style>
-	    
-	<head>
-	    <title>ElleTea Blog</title>
-	</head>
-	<body>
-	    <!-- Sidebar -->
-	<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-	  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-	  <a href="https://www.instagram.com/lizztea/?hl=en" target="_blank" class="w3-bar-item w3-button">Instagram</a>
-	</div>
-	<div>
-	    
-	  <input type="image" src="img/ElleTeaLogo.png" name="saveForm" class="btTxt submit" id="saveForm" width="150px" height="150px" padding-bottom="0px" onClick="w3_open()"/>
-	</div>
-	     
-	    <h2><center>A Beautiful Woman</center> </h2>
-	    
-	    <p> <center>That Can Change A Tire</center> </p>
-	    <figure><center>
-	    <img src="img/myprettygirlfriend.png" alt="Not Available" width="500px" height="300px"/>
-	        <figcaption>Photo of Liz demonstrating the size of fish that she caught</figcaption>
-	        </center></figure>
-	<script>
-	function w3_open() {
-	    document.getElementById("mySidebar").style.display = "block";
-	}
-	function w3_close() {
-	    document.getElementById("mySidebar").style.display = "none";
-	}
-	</script>
-	</body>
-	</html>
->>>>>>> 5a7fcf3ad7968543e4d521d1da99f44b315225dd
